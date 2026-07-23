@@ -75,10 +75,13 @@
 <h1>🇯🇵 Kanji Study</h1>
 
 <div class="deck-selector">
-  <button class="deck-btn active" id="deck-all" onclick="setDeck('all')">📚 All Kanji</button>
+  <button class="deck-btn active" id="deck-all" onclick="setDeck('all')">📚 All</button>
   <button class="deck-btn" id="deck-day5" onclick="setDeck('day5')">☀️ Day 5</button>
   <button class="deck-btn" id="deck-day6" onclick="setDeck('day6')">🚆 Day 6</button>
   <button class="deck-btn" id="deck-day7" onclick="setDeck('day7')">🎨 Day 7</button>
+  <button class="deck-btn" id="deck-day8" onclick="setDeck('day8')">🍱 Day 8</button>
+  <button class="deck-btn" id="deck-day9" onclick="setDeck('day9')">🐕 Day 9</button>
+  <button class="deck-btn" id="deck-day10" onclick="setDeck('day10')">📖 Day 10</button>
 </div>
 
 <div class="modes">
@@ -468,12 +471,67 @@ const kanjiDatabase = [
 ["黒","Black","コク","くろ、くろ.ずむ、くろ.い","黒[くろ]い、黒猫[くろねこ]、黒板[こくばん]",[
   "黒[くろ]い猫[ねこ]がいる。|There is a black cat.", 
   "黒板[こくばん]に字[じ]を書[か]く。|Write letters on the blackboard."
+]],
+["手","Hand","シュ","て、てー、ーて、たー","手[て]、上手[じょうず]、下手[へた]、手紙[てがみ]",[
+  "巨人[きょじん]の手[て]はとても大[おお]きい。|A titan's hand is very big.", 
+  "右手[みぎて]を上[あ]げる。|Raise your right hand."
+]],
+["好","Like, favorable","コウ","この.む、す.く、よ.い、い.い","好[す]き、大好[だいす]き、好[この]む",[
+  "私[わたし]は先輩[せんぱい]が好[す]きです。|I like you, Senpai.", 
+  "アニメが大好[だいす]きです。|I love anime."
+]],
+["主","Master, main","シュ、ス、シュウ","ぬし、おも、あるじ","主人[しゅじん]、主人公[しゅじんこう]、主[おも]に",[
+  "この物語[ものがたり]の主人公[しゅじんこう]だ。|The main character of this story.", 
+  "犬[いぬ]の飼[か]い主[ぬし]を探[さが]す。|Look for the dog's owner."
+]],
+["肉","Meat","ニク","しし","肉[にく]、牛肉[ぎゅうにく]、豚肉[ぶたにく]",[
+  "サシャは肉[にく]が大好[だいす]きだ。|Sasha loves meat.", 
+  "スーパーで肉[にく]を買[か]う。|I buy meat at the supermarket."
+]],
+["魚","Fish","ギョ","うお、さかな、ーざかな","魚[さかな]、金魚[きんぎょ]、人魚[にんぎょ]",[
+  "海[うみ]には大[おお]きな魚[さかな]がいる。|There are big fish in the sea.", 
+  "川[かわ]で魚[さかな]を釣[つ]る。|Catch fish in the river."
+]],
+["飲","Drink","イン、オン","の.む、ーの.み","飲[の]む、飲[の]み物[もの]、飲食店[いんしょくてん]",[
+  "冷[つめ]たい水[みず]を飲[の]む。|Drink cold water.", 
+  "カフェでコーヒーを飲[の]む。|Drink coffee at a cafe."
+]],
+["物","Thing, object","ブツ、モツ","もの、ものー","物[もの]、買[か]い物[もの]、動物[どうぶつ]、荷物[にもつ]",[
+  "おいしい食[た]べ物[もの]を食[た]べる。|Eat delicious food.", 
+  "買[か]い物[もの]に行[い]きます。|I will go shopping."
+]],
+["近","Near, early, akin","キン、コン","ちか.い","近[ちか]い、近所[きんじょ]、最近[さいきん]",[
+  "学校[がっこう]は家[いえ]から近[ちか]いです。|The school is near my house.", 
+  "最近[さいきん]、アニメをよく見[み]る。|Recently, I watch anime a lot."
+]],
+["犬","Dog","ケン","いぬ、いぬー","犬[いぬ]、子犬[こいぬ]、番犬[ばんけん]",[
+  "あそこに可愛[かわい]い犬[いぬ]がいる。|There is a cute dog over there.", 
+  "私[わたし]の犬[いぬ]は肉[にく]が好[す]きだ。|My dog likes meat."
+]],
+["買","Buy","バイ","か.う","買[か]う、買[か]い物[もの]、売買[ばいばい]",[
+  "スーパーでパンを買[か]う。|I buy bread at the supermarket.", 
+  "新[あたら]しいゲームを買[か]いました。|I bought a new game."
+]],
+["起","Wake up, rouse","キ","お.きる、お.こす、お.こる","起[お]きる、早起[はやお]き、起動[きどう]",[
+  "毎朝[まいあさ]六時[ろくじ]に起[お]きる。|I wake up at six every morning.", 
+  "巨人[きょじん]が起[お]き上[あ]がる。|The titan rises."
+]],
+["帰","Return","キ","かえ.る、かえ.す","帰[かえ]る、帰国[きこく]、帰宅[きたく]",[
+  "走[はし]って家[いえ]に帰[かえ]る。|I run back home.", 
+  "学校[がっこう]から帰[かえ]る。|I return from school."
+]],
+["達","Reach, plural suffix","タツ、ダチ","ーたち","友達[ともだち]、私達[わたしたち]、配達[はいたつ]",[
+  "私達[わたしたち]は友達[ともだち]です。|We are friends.", 
+  "目標[もくひょう]に到達[とうたつ]する。|Reach the goal."
 ]]
 ];
 
 const day5List = ['今','朝','昼','晩','時','分','半','午','前','後','休','毎','何'];
 const day6List = ['行','来','校','週','去','年','駅','電','車','自','転','動'];
 const day7List = ['高','安','大','小','新','古','青','白','赤','黒'];
+const day8List = ['上','下','父','母','子','手','好','主','肉','魚','食','飲','物'];
+const day9List = ['近','間','右','左','外','男','女','犬'];
+const day10List = ['書','聞','読','見','話','買','起','帰','友','達'];
 
 let kanji = [...kanjiDatabase];
 let mode = 'flash';
@@ -510,6 +568,12 @@ function setDeck(deck) {
     kanji = kanjiDatabase.filter(k => day6List.includes(k[0]));
   } else if (deck === 'day7') {
     kanji = kanjiDatabase.filter(k => day7List.includes(k[0]));
+  } else if (deck === 'day8') {
+    kanji = kanjiDatabase.filter(k => day8List.includes(k[0]));
+  } else if (deck === 'day9') {
+    kanji = kanjiDatabase.filter(k => day9List.includes(k[0]));
+  } else if (deck === 'day10') {
+    kanji = kanjiDatabase.filter(k => day10List.includes(k[0]));
   }
   
   order = shuffleArr(kanji.map((_,i)=>i));
